@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import { formatterPrice } from '~/util';
 
 export const UserControl: FunctionComponent = () => {
   return (
@@ -10,7 +11,7 @@ export const UserControl: FunctionComponent = () => {
           </div>
         </div>
 
-        <div className="text-left pl-4">
+        <div className="text-left pl-4 hidden md:block">
           <div className="font-bold text-xl text-dark">Budi Budiman</div>
           <div className="font-bold text-content">Owner at PT Suka Maju</div>
         </div>
@@ -24,6 +25,12 @@ export const UserControl: FunctionComponent = () => {
         <li>
           <a>Settings</a>
         </li>
+        <div className="text-center mt-4">
+          <span className="font-bold">Total Balance {formatterPrice.format(1580000000)}</span>
+          <button className="bg-primary text-white w-full mt-2 font-bold text-lg capitalize py-2 h-fit rounded-xl hover:bg-opacity-95">
+            Top Up
+          </button>
+        </div>
       </ul>
     </div>
   );

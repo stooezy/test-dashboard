@@ -23,7 +23,7 @@ export const ProductsCard: FunctionComponent<TProductsCard> = ({ label, classNam
   return (
     <div className={`dashboard-card ${className ? className : ''}`}>
       <div className="text-content font-bold">{label}</div>
-      <div className="mt-4 flex w-full space-x-4">
+      <div className="mt-4 flex w-full space-y-4 space-x-0 md:space-y-0 md:space-x-4 flex-wrap md:flex-nowrap">
         {topProducts.map((product) => (
           <Product
             icon={product.icon}

@@ -9,7 +9,7 @@ export type TProduct = {
 };
 export const Product: FunctionComponent<TProduct> = ({ icon, name, price, transactions }) => {
   return (
-    <div className="w-full border-4 border-primary-klikoo rounded-xl text-center px-1 py-4">
+    <div className="w-full h-full border-4 border-primary-klikoo rounded-xl text-center px-1 py-4">
       <img src={icon} alt={name} className="mx-auto h-14" />
       <div className="mt-1 text-primary font-bold">{name}</div>
       {price ? (

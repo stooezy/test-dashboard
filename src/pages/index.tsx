@@ -10,13 +10,18 @@ function App() {
   return (
     <Layout>
       <div className="flex">
-        <div className="pt-8 px-14 w-full ">
-          <section id="header">
-            <div className="font-bold text-3xl">Dashboard</div>
-            <div className="text-content text-lg font-bold">Today’s date: Sun, 10 April 2022</div>
+        <div className="pt-8 px-8 xl:px-14 w-full ">
+          <section id="header" className="flex justify-between">
+            <div>
+              <div className="font-bold text-3xl">Dashboard</div>
+              <div className="text-content text-lg font-bold">Today’s date: Sun, 10 April 2022</div>
+            </div>
+            <div className="block 2xl:hidden">
+              <UserControl />
+            </div>
           </section>
 
-          <div className="grid grid-cols-3 gap-4 my-16">
+          <div className="grid xl:grid-cols-3 gap-4 my-16">
             <SummaryCard
               comment="0.3% compared to 7 days ago"
               label="Profit"
@@ -39,14 +44,14 @@ function App() {
               type="transactions"
             />
 
-            <div className="col-span-2">
+            <div className="xl:col-span-2">
               <ChartCard label="Sales Chart" />
               <ProductsCard label="Top 5 Products" className="mt-4" />
             </div>
             <AgentsCard label="Top 5 Agents" />
           </div>
         </div>
-        <div className="min-w-[408px] bg-primary-klikoo-80">
+        <div className="min-w-[408px] bg-primary-klikoo-80 hidden 2xl:block">
           <div className="p-8">
             <div className="w-full flex justify-center">
               <UserControl />
